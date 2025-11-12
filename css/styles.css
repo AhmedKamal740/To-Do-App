@@ -128,7 +128,7 @@ input[type="checkbox"] {
   html {
     font-size: 12pt;
   }
-  #add-buttpon {
+  #add-button {
     position: unset;
     width: 100%;
     margin-top: 10px;
