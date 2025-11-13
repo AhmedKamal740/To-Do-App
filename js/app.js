@@ -13,7 +13,7 @@ function addTodo() {
   if (todoText.length > 0) {
     let todoObject = {
       text: todoText,
-      comblated: false,
+      completed: false,
     };
     alltodos.push(todoObject);
     updateTodoList();
@@ -80,8 +80,8 @@ function saveData() {
   localStorage.setItem("tasks", data);
 }
 function getToods() {
-  let todoTask = localStorage.getItem("tasks") || [];
-  return JSON.parse(todoTask);
+  let todoTask = localStorage.getItem("tasks");
+  return todoTask ? JSON.parse(todoTask) : [];
 }
 function deleteTodoTitem(todoindex) {
   alltodos = alltodos.filter((_, i) => i !== todoindex);
